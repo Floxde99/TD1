@@ -1,11 +1,10 @@
-console.log("Server is running");
 const express = require("express");
 const mongoose = require("mongoose");
- const livreRouter = require("./routers/livreRouter");
+const bookRouter = require("./routers/bookRouter");
 
 const app = express();
 app.use(express.json());
-app.use(livreRouter);
+app.use(bookRouter);
 app.listen(3000, (err) => {
   if (err) {
     console.log("Error starting server:", err);

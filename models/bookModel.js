@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
-const livreSchema = new mongoose.Schema({
-   titre: {
+const booksModel = new mongoose.Schema({
+   title: {
       type: String,
       required: [true, "Le titre est requis"],
    },
-   auteur: {
+   author: {
       type: String,
       required: [true, "L'auteur est requis"],
    },
@@ -19,6 +19,6 @@ const livreSchema = new mongoose.Schema({
     },
 })
 
-const userModel = mongoose.model("livres", livreSchema)
+const bookModel = mongoose.model("livres", booksModel)
 
-module.exports = userModel
+module.exports = bookModel
