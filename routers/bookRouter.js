@@ -3,8 +3,8 @@ const bookModel = require('../models/bookModel');
 bookRouter.post("/books", async(req, res) => {
     try {
       const book = new bookModel({
-        titre: req.body.titre,
-        auteur: req.body.auteur,
+        title: req.body.titre,
+        author: req.body.auteur,
         publication: req.body.publication,
         genre: req.body.genre,
       });
